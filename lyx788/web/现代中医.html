@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国粹中医</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        .main{
+            width: 80%;
+            height: 3000px;
+            /* background-color: aqua; */
+            margin: auto;
+        }
+        .imaginecircle{
+            width:800px;
+            height: 500px;
+            background-color: bisque;
+            
+            margin: auto;
+            overflow: hidden;
+        }
+        #imglist{
+            width:4000px;
+            height: 500px;
+            /* margin: auto; */
+        }
+        #imglist img{
+            width: 800px;
+            height: 500px;
+            /* margin: auto; */
+        }
+        #imglist li{
+            float: left;
+        }
+        .prev{
+            background-color: black;
+            width: 30px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            left: 440px;
+            top: 45%;
+            color: white;
+            cursor: pointer;
+        }
+        .next{
+            background-color: black;
+            width: 30px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            right: 440px;
+            color: white;
+            top: 45%;
+            cursor: pointer;
+        }
+        .guide{
+            width: 90%;
+            height: 50px;
+            background-color:#ebcca1;
+            font-size: 30px;
+            margin: auto;
+            border-radius: 25px;
+            line-height: 50px;
+            text-align:left ;
+            padding-left: 10px;
+            color: aliceblue;
+            letter-spacing: 2px;
+            font-family: serif;
+            margin-top: 10px;
+        }
+        .top{
+            width: 100%;
+            height: 150px;
+            margin-top: 0;
+        }
+        .logo{
+            height: 150px;
+            width: 200px;
+            float: left;
+            margin-left: 200px;
+        }
+        .logo img{
+            width: 200px;
+            height: 150px;
+        }
+        .menu{
+            height: 80px;
+            width: 1350px;
+            background:linear-gradient( #f4e7d6,#e60);
+           margin: auto;
+        }
+        .mylist li{
+            width: 250px;
+            height: 80px;
+            list-style: none;
+            padding: 0;
+            float: left;
+            text-decoration: none;
+            font-size: 35px;
+            line-height: 80px;
+            color:aliceblue;
+            margin-left: 20px;
+            
+        }
+        .search{
+            height: 50px;
+            width: 400px;
+            /* background-color:blue; */
+            float: right;
+            margin-top: 80px;
+            margin-right: 170px;
+        }
+        .search-container{
+            display: flex;
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            float: right;
+            
+
+        }
+        .search-container input{
+            flex: 1;
+            height: 24px;
+            width:  50px;
+            line-height: 15px;
+            outline: none;
+            border-top-left-radius: 5px ;
+            border-bottom-left-radius:5px ;
+            border-color: #f5d3be;
+        }
+        .search-container button{
+            height:30px;
+            line-height: 15px;  
+            padding: 0 30px;
+            border: none;
+            box-sizing:border-box ;
+            background-color: #f5d3be;
+            color: white;
+            cursor: pointer;
+            border-top-right-radius: 5px ;
+            border-bottom-right-radius:5px ;
+        }
+        .bottom{
+            height: 20px;
+            width: 100%;
+            background-color: black;
+            opacity: 70%;
+            line-height: 20px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(243, 223, 174);
+        }
+        a:hover{
+            color: greenyellow;
+        }
+        .content_1{
+            width: 800px;
+            height: 120px;
+            /* background-color: #e60; */
+            font-size: 20px;
+            text-indent: 40px;
+            margin: auto;
+        }
+        .vidoecontanter{
+            width: 1200px;
+            height: 800px;
+            margin: auto;
+            background-color: #ebcca1;
+        }
+        .vidoecontanter video{
+            width: 1200px;
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+   <div class="top">
+        <div class="logo">
+            <img src="../img/中医/中医logo.webp" alt="">
+        </div>
+        <div class="search">
+            <div class="search-container">
+                <input type="text" >
+                <button>搜索</button>
+            </div>
+        </div>
+   </div>
+    
+    <div class="menu">
+        <ul class="mylist">
+            <li ><a href="../index.html">首页</a></li>
+            <li><a href="认识中医.html">认识中医</a></li>
+            <li><a href="中医理念.html">中医理念</a></li>
+            <li><a href="历史发展.html">历史发展</a></li>
+            <li><a href="现代中医.html">现代中医</a></li>
+           
+            
+        </ul>
+    </div>
+
+
+    <div class="main">
+        <div class="imaginecircle">
+            <ul id="imglist" >
+                <li><img src="../img/中医/循环1.webp" alt="" ></li>
+                <li><img src="../img/中医/循环2.png" alt="" ></li>
+                <li><img src="../img/中医/循环3.webp" alt="" ></li>
+                <li><img src="../img/中医/循环5.jpg" alt=""></li>
+                <li><img src="../img/中医/循环4.webp" alt=""></li>
+
+            </ul>
+            <div class="prev">《</div>
+            <div class="next">》</div>
+        </div>
+
+        <script>
+            var eprev=document.querySelector('.prev');
+            var enext=document.querySelector('.next');
+            var left = 0;
+            var timer;
+            run();
+            function run(){
+                if(left <=-3200){
+                    left = 0;
+                }
+                imglist.style.marginLeft=  left+ "px";
+                var n = (left%800==0) ? n=2000:n=10;
+                left-= 10;
+                timer = setTimeout(run,n);
+            }
+            function imgchange(n){
+                let lt=-(n*800);
+                imglist.style.marginLeft=lt+'px';
+                left=lt;
+            }
+            eprev.onclick=function(){
+                let prevgo=Math.floor(-left/800)-1;
+                if(prevgo==-1){
+                    prevgo=4;
+                }
+                imgchange(prevgo);
+            }
+            enext.onclick=function(){
+                let nextgo=Math.floor(-left/800)+1;
+                if(nextgo==5){
+                    nextgo=0;
+                }
+                imgchange(nextgo);
+            }
+        </script>
+    <div class="guide">现代中医</div>
+    <div class="content_1">
+        <p>然而现代中医的处境并不容易，中医的原理并不知晓，在市场上被西医抢占生态位，中医学校开设的课程不能做到传承经典与保证学生的就业并举……现代医学存在着种种的问题。现在由人大代表的发言来具体说明。视频来源：https://www.bilibili.com/video/BV1gj411A7xK/</p>
+    </div>
+    <div class="vidoecontanter"><video src="../video/中医的现状 - 1.中医的现状(Av439561547,P1).mp4" controls></video></div>
+
+    </div>
+    <div class="bottom" style="color: white;">2024@卢泳希版权所有</div>
+
+</body>
+</html>

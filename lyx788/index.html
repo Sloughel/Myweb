@@ -3,97 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MYPAGE</title>
+    <title>国粹中医</title>
     <style>
-        .top{
-            width: 760px;
-            height: 100px;
-            /* float: left; */
-            /* background-color: green; */
-            margin: auto;
-            text-align: center;
-            font-size: 50px;
-            line-height: 100px;
-        }
-        .top img{
-           
-           float: left;
-           height: 120px;width: 120px;
-        }
-       
-        .menu{
-            width: 760px;
-            height: 35px;
-            background-color: red;
-            margin: auto;
-            text-align: center;
-            line-height: 35px;
-            font-size: 20px;
-            font-style: oblique;
-            font-weight: 200;
-             
-        }
-        .list li{
-            float: left;
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
             list-style: none;
-            width: 100px;
-            height: 35px;
-            text-decoration: none; 
-        } 
-        .all{ 
-            width: 760px;
-            height: 650px;
-            margin: auto;
         }
         .main{
-            width: 610px;
-            height: 650px;
-            float: left;
-            line-height: 150px;
-            text-align: center;
-            font-size: 50px;
+            width: 80%;
+            height: 1500px;
+            /* background-color: aqua; */
+            margin: auto;
         }
-       
-        .second{
-            width: 150px;
-            height: 650px;
+        .imaginecircle{
+            width:800px;
+            height: 500px;
+            background-color: bisque;
+            
+            margin: auto;
+            overflow: hidden;
+        }
+        #imglist{
+            width:4000px;
+            height: 500px;
+            /* margin: auto; */
+        }
+        #imglist img{
+            width: 800px;
+            height: 500px;
+            /* margin: auto; */
+        }
+        #imglist li{
             float: left;
-        background-color: aqua;
+        }
+        .prev{
+            background-color: black;
+            width: 30px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            left: 440px;
+            top: 55%;
+            color: white;
+            cursor: pointer;
+        }
+        .next{
+            background-color: black;
+            width: 30px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            right: 440px;
+            color: white;
+            top: 55%;
+            cursor: pointer;
+        }
+        .guide{
+            width: 90%;
+            height: 50px;
+            background-color:#ebcca1;
+            font-size: 30px;
+            margin: auto;
+            border-radius: 25px;
+            line-height: 50px;
+            text-align:left ;
+            padding-left: 10px;
+            color: aliceblue;
+            letter-spacing: 2px;
+            font-family: serif;
+            margin-top: 10px;
+        }
+        .top{
+            width: 100%;
+            height: 150px;
+            margin-top: 0;
+        }
+        .logo{
+            height: 150px;
+            width: 200px;
+            float: left;
+            margin-left: 200px;
+        }
+        .logo img{
+            width: 200px;
+            height: 150px;
+        }
+        .menu{
+            height: 80px;
+            width: 1350px;
+            background:linear-gradient( #f4e7d6,#e60);
+           margin: auto;
+        }
+        .mylist li{
+            width: 250px;
+            height: 80px;
+            list-style: none;
+            padding: 0;
+            float: left;
+            text-decoration: none;
+            font-size: 35px;
+            line-height: 80px;
+            color:aliceblue;
+            margin-left: 20px;
+            
+        }
+        .search{
+            height: 50px;
+            width: 400px;
+            /* background-color:blue; */
+            float: right;
+            margin-top: 80px;
+            margin-right: 170px;
+        }
+        .search-container{
+            display: flex;
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            float: right;
+            
+
+        }
+        .search-container input{
+            flex: 1;
+            height: 24px;
+            width:  50px;
+            line-height: 15px;
+            outline: none;
+            border-top-left-radius: 5px ;
+            border-bottom-left-radius:5px ;
+            border-color: #f5d3be;
+        }
+        .search-container button{
+            height:30px;
+            line-height: 15px;  
+            padding: 0 30px;
+            border: none;
+            box-sizing:border-box ;
+            background-color: #f5d3be;
+            color: white;
+            cursor: pointer;
+            border-top-right-radius: 5px ;
+            border-bottom-right-radius:5px ;
+        }
+        .bottom{
+            height: 20px;
+            width: 100%;
+            background-color: black;
+            opacity: 70%;
+            line-height: 20px;
+            text-align: center;
         }
         a{
             text-decoration: none;
-            color: #246;
+            color: rgb(243, 223, 174);
         }
         a:hover{
-            color: greenyellow; 
+            color: greenyellow;
+        }
+        .why{
+            width: 600px;
+            margin-left: 100px;
+            height: 500px;
+            font-size: 20px;
+            font-weight: 500;
+            padding-top: 20px;
+            padding-left: 20px;
+            /* background-color: #f4e7d6; */
+            padding-right: 40px;
+            float: left;
+            margin-top: 20px;
+            text-indent: 40px;
+        }
+        .show{
+            width: 500px;
+            height: 550px;
+            float: left;
+            margin-top: 20px;
+             border:2px ;
+            overflow: hidden;
+        }
+        .show img{
+            width: 500px;
+            height: 550px;
+            transition: 0.5s;
+            
+        }
+        .show img:hover{
+            transform: scale(1.3);
         }
     </style>
 </head>
-
 <body>
-   <div class="top" ><img src="image/史梓洋.jpg" alt="" >
-    <i style="color: #650;">吾虽年迈，万军取首！</i>
-
+   <div class="top">
+        <div class="logo">
+            <img src="img/中医/中医logo.webp" alt="">
+        </div>
+        <div class="search">
+            <div class="search-container">
+                <input type="text" >
+                <button>搜索</button>
+            </div>
+        </div>
    </div>
+    
     <div class="menu">
-        <ul class="list">
-            <li><a href="index.html">首页</a></li>
-            <li><a href="web/个人简介.html">个人简介</a> </a></li>
-            <li><a href="web/动画作品.html">动画作品 </a></li>
-            <li><a href="web/我的相册.html">我的相册 </a></li>
-            <li><a href="web/学习心得.html">学习心得 </a></li>
-            <li><a href="mailto:ggg@163.com">写信给我</a></li>
+        <ul class="mylist">
+            <li ><a href="index.html">首页</a></li>
+            <li><a href="web/认识中医.html">认识中医</a></li>
+            <li><a href="web/中医理念.html">中医理念</a></li>
+            <li><a href="web/历史发展.html">历史发展</a></li>
+            <li><a href="web/现代中医.html">现代中医</a></li>
+           
+            
         </ul>
     </div>
-        <div class="all">
-        
-        <div class="second"></div>
-        
-        <div class="main" style="color: blue;"><p>有朋自远方来</p>
-            <p style="color: red;">虽远必诛</p><hr>
-            <a href="web/个人简介.html" style="font-size: 20px;">点我欣赏艺术！</a>
-            
+
+
+    <div class="main">
+        <div class="imaginecircle">
+            <ul id="imglist" >
+                <li><img src="img/中医/循环1.webp" alt="" ></li>
+                <li><img src="img/中医/循环2.png" alt="" ></li>
+                <li><img src="img/中医/循环3.webp" alt="" ></li>
+                <li><img src="img/中医/循环5.jpg" alt=""></li>
+                <li><img src="img/中医/循环4.webp" alt=""></li>
+
+            </ul>
+            <div class="prev">《</div>
+            <div class="next">》</div>
         </div>
+
+        <script>
+            var eprev=document.querySelector('.prev');
+            var enext=document.querySelector('.next');
+            var left = 0;
+            var timer;
+            run();
+            function run(){
+                if(left <=-3200){
+                    left = 0;
+                }
+                imglist.style.marginLeft=  left+ "px";
+                var n = (left%800==0) ? n=2000:n=10;
+                left-= 10;
+                timer = setTimeout(run,n);
+            }
+            function imgchange(n){
+                let lt=-(n*800);
+                imglist.style.marginLeft=lt+'px';
+                left=lt;
+            }
+            eprev.onclick=function(){
+                let prevgo=Math.floor(-left/800)-1;
+                if(prevgo==-1){
+                    prevgo=4;
+                }
+                imgchange(prevgo);
+            }
+            enext.onclick=function(){
+                let nextgo=Math.floor(-left/800)+1;
+                if(nextgo==5){
+                    nextgo=0;
+                }
+                imgchange(nextgo);
+            }
+        </script>
+    <div class="guide">为什么做这个主页：</div>
+    <div class="why">
+         <p >虽然说”中医“这个词人人都听说过，也有很多人切身体验过。</p>
+         <br>
+         <p>中医作为中国传统文化的重要组成部分，拥有数千年的历史，其独特的理论体系和治疗方法在世界医学领域中独树一帜。</p>
+         <br>
+         <p>然而，在现代社会，中医面临着诸多挑战。一方面，随着科学技术的发展，西医以其快速、精准的诊断和治疗手段获得了广泛的认可和应用，这在一定程度上挤压了中医的生存空间。另一方面，中医的传承和发展也存在一些问题，如传统知识的流失、现代医学教育体系中中医教育的边缘化等。</p>
+         <br>
+         <p>那么我们就不难解释网络上对中医褒贬不一，要么神乎其神，要么极度贬低的评价。如果从行业的发展来看，中医的生态空间可谓是极其狭窄，但中医的成就与功效就摆在那里，你不可能把它丢掉。</p>
+         <br>
+         <p>这个网页配合图片，视频等多种媒体介质从各个方面对中医进行介绍，认识中医的理念与古今。</p>
+         <p style="font-size: 15px;color: red;">声明：该网页以及各子页的文字内容来自百度百科: https://baike.baidu.com/item/%E4%B8%AD%E5%8C%BB/234039?fr=ge_ala，
+            图片内容均来自网络免费资源。</p>
     </div>
+    <div class="show">
+        <img src="img/中医/xunhuan.webp" alt="">
+    </div>
+    </div>
+    <div class="bottom" style="color: white;">2024@卢泳希版权所有</div>
+
 </body>
 </html>

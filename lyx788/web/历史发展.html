@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国粹中医</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        .main{
+            width: 80%;
+            height: 4500px;
+            /* background-color: aqua; */
+            margin: auto;
+        }
+        .imaginecircle{
+            width:800px;
+            height: 500px;
+            background-color: bisque;
+            
+            margin: auto;
+            overflow: hidden;
+        }
+        #imglist{
+            width:4000px;
+            height: 500px;
+            /* margin: auto; */
+        }
+        #imglist img{
+            width: 800px;
+            height: 500px;
+            /* margin: auto; */
+        }
+        #imglist li{
+            float: left;
+        }
+        .prev{
+            background-color: black;
+            width: 30px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            left: 440px;
+            top: 45%;
+            color: white;
+            cursor: pointer;
+        }
+        .next{
+            background-color: black;
+            width: 30px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            right: 440px;
+            color: white;
+            top: 45%;
+            cursor: pointer;
+        }
+        .guide{
+            width: 90%;
+            height: 50px;
+            background-color:#ebcca1;
+            font-size: 30px;
+            margin: auto;
+            border-radius: 25px;
+            line-height: 50px;
+            text-align:left ;
+            padding-left: 10px;
+            color: aliceblue;
+            letter-spacing: 2px;
+            font-family: serif;
+            margin-top: 10px;
+        }
+        .top{
+            width: 100%;
+            height: 150px;
+            margin-top: 0;
+        }
+        .logo{
+            height: 150px;
+            width: 200px;
+            float: left;
+            margin-left: 200px;
+        }
+        .logo img{
+            width: 200px;
+            height: 150px;
+        }
+        .menu{
+            height: 80px;
+            width: 1350px;
+            background:linear-gradient( #f4e7d6,#e60);
+           margin: auto;
+        }
+        .mylist li{
+            width: 250px;
+            height: 80px;
+            list-style: none;
+            padding: 0;
+            float: left;
+            text-decoration: none;
+            font-size: 35px;
+            line-height: 80px;
+            color:aliceblue;
+            margin-left: 20px;
+            
+        }
+        .search{
+            height: 50px;
+            width: 400px;
+            /* background-color:blue; */
+            float: right;
+            margin-top: 80px;
+            margin-right: 170px;
+        }
+        .search-container{
+            display: flex;
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            float: right;
+            
+
+        }
+        .search-container input{
+            flex: 1;
+            height: 24px;
+            width:  50px;
+            line-height: 15px;
+            outline: none;
+            border-top-left-radius: 5px ;
+            border-bottom-left-radius:5px ;
+            border-color: #f5d3be;
+        }
+        .search-container button{
+            height:30px;
+            line-height: 15px;  
+            padding: 0 30px;
+            border: none;
+            box-sizing:border-box ;
+            background-color: #f5d3be;
+            color: white;
+            cursor: pointer;
+            border-top-right-radius: 5px ;
+            border-bottom-right-radius:5px ;
+        }
+        .bottom{
+            height: 20px;
+            width: 100%;
+            background-color: black;
+            opacity: 70%;
+            line-height: 20px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(243, 223, 174);
+        }
+        a:hover{
+            color: greenyellow;
+        }
+        .content_1{
+            width: 600px;
+            height: 500px;
+            background-color: aliceblue;
+            margin-top: 20px;
+            /* float: left; */
+            font-size: 20px;
+            /* text-align: center; */
+            text-indent: 40px;
+        }
+        .content_2{
+            width: 600px;
+            height: 450px;
+            background-color: aliceblue;
+            float: right;
+            text-indent: 40px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .arry{
+            width: 200px;
+            height: 200px;
+            margin-left: 500px;
+            background-color: #f4e7d6;
+            margin: auto;
+        }
+        .arry img{
+            width: 400px;
+            height: 200px;
+            
+        }
+        .arry_2{
+            width: 200px;
+            height: 200px;
+            margin-left: 450px;
+            background-color: #f4e7d6;
+           
+            margin: auto;
+            margin-top: 470px;
+        }
+        .arry_2 img{
+            width: 400px;
+            height: 200px;
+        }
+
+        .all{
+            width: 1000px;
+            height: 170px;
+            background-color: antiquewhite;
+            font-size: 20px;
+            margin: auto;
+            text-indent: 40px;
+            margin-top: 20px;
+        }
+        .content_3{
+            width: 600px;
+            height: 700px;
+            background-color: aliceblue;
+            float: right;
+            text-indent: 40px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+   <div class="top">
+        <div class="logo">
+            <img src="../img/中医/中医logo.webp" alt="">
+        </div>
+        <div class="search">
+            <div class="search-container">
+                <input type="text" >
+                <button>搜索</button>
+            </div>
+        </div>
+   </div>
+    
+    <div class="menu">
+        <ul class="mylist">
+            <li ><a href="../index.html">首页</a></li>
+            <li><a href="认识中医.html">认识中医</a></li>
+            <li><a href="中医理念.html">中医理念</a></li>
+            <li><a href="历史发展.html">历史发展</a></li>
+            <li><a href="现代中医.html">现代中医</a></li>
+           
+            
+        </ul>
+    </div>
+
+
+    <div class="main">
+        <div class="imaginecircle">
+            <ul id="imglist" >
+                <li><img src="../img/中医/循环1.webp" alt="" ></li>
+                <li><img src="../img/中医/循环2.png" alt="" ></li>
+                <li><img src="../img/中医/循环3.webp" alt="" ></li>
+                <li><img src="../img/中医/循环5.jpg" alt=""></li>
+                <li><img src="../img/中医/循环4.webp" alt=""></li>
+
+            </ul>
+            <div class="prev">《</div>
+            <div class="next">》</div>
+        </div>
+
+        <script>
+            var eprev=document.querySelector('.prev');
+            var enext=document.querySelector('.next');
+            var left = 0;
+            var timer;
+            run();
+            function run(){
+                if(left <=-3200){
+                    left = 0;
+                }
+                imglist.style.marginLeft=  left+ "px";
+                var n = (left%800==0) ? n=2000:n=10;
+                left-= 10;
+                timer = setTimeout(run,n);
+            }
+            function imgchange(n){
+                let lt=-(n*800);
+                imglist.style.marginLeft=lt+'px';
+                left=lt;
+            }
+            eprev.onclick=function(){
+                let prevgo=Math.floor(-left/800)-1;
+                if(prevgo==-1){
+                    prevgo=4;
+                }
+                imgchange(prevgo);
+            }
+            enext.onclick=function(){
+                let nextgo=Math.floor(-left/800)+1;
+                if(nextgo==5){
+                    nextgo=0;
+                }
+                imgchange(nextgo);
+            }
+        </script>
+    <div class="guide">中医的历史发展</div>
+    <div class="all">
+        <h3 style="text-align: center;text-indent: 0;">综述</h3>
+        <p>自清朝末年，中国受西方列强侵略，国运衰弱。中医学陷入存与废的争论之中。同属中国医学体系的日本医学、韩国的韩医学亦是如此。中医中药在中国古老的大地上已经运用了几千年的历史，经过几千年的临床实践，证实了中国的中医中药无论是在治病上、在防病上，还是在养生上，都是确凿有效可行的。在西医未传入中国之前，我们的祖祖辈辈都用中医中药来治疗疾病，挽救了无数人的生命。中医对疾病的治疗是宏观的、全面的。中医，即相对西医而言。在西方医学没有流入中国以前，中医基本不叫中医这个名字，而是有独特且内涵丰富的称谓。</p>
+    </div>
+    <div class="content_1">
+        <h3 style="text-align: center;text-indent: 0;">形成时期</h3>
+        <p>在远古时代，中华民族的祖先发现了一些动植物可以解除病痛，积累了一些用药知识。随着人类的进化，开始有目的地寻找防治疾病的药物和方法，所谓“神农尝百草”、“药食同源”，就是当时的真实写照。夏代（约前2070-前1600）酒和商代（前1600-前1046）汤液的发明，为提高用药效果提供了帮助。进入西周时期（前1046-前771），开始有了食医、疾医、疡医、兽医的分工。 
+
+            春秋战国中医理论已经基本形成，出现了解剖和医学分科，已经采用“四诊”，治疗法有砭石、针刺、汤药、艾灸、导引、布气、祝由等。《黄帝内经》，它是中国传统医学四大经典著作之一，也是中国医学宝库中成书最早的一部医学典籍。同时是研究人的生理学、病理学、诊断学、治疗原则和药物学的医学巨著。在理论上建立了中医学上的阴阳五行学说、脉象学说、藏象学说、 经络学说、病因学说、病机学说、病症、诊法、论治及养生学说、运气学说等学说，后来的中医学和养生学开始用阴阳五行解释人体生理，出现了“医工”、金针、铜钥匙等。是指以中国汉族创造的传统医学为主的医学，是研究人体生理、病理以及疾病的诊断和防治等的一门学科。 </p>
+    </div>
+    <div class="arry"><img src="../img/中医/箭头右下.jpg"></div>
+    <div class="content_2">
+        <h3 style="text-align: center;text-indent: 0;">发展时期</h3>
+        <p>秦汉时期的中医典籍《黄帝内经》，系统论述了人的生理、病理、疾病以及“治未病”和疾病治疗的原则及方法，确立了中医学的思维模式，标志着从单纯的临床经验积累发展到了系统理论总结阶段，形成了中医药理论体系框架。 东汉时期，张仲景的《伤寒杂病论》，提出了外感热病（包括瘟疫等传染病）的诊治原则和方法 ，论述了内伤杂病的病因、病证、诊法、治疗、预防等辨证规律和原则，确立了辨证论治的理论和方法体系。同时期的《神农本草经》，概括论述了君臣佐使、七情合和、四气五味等药物配伍和药性理论，对于合理处方、安全用药、提高疗效具有十分重要的指导作用，为中药学理论体系的形成与发展奠定了基础。东汉末年，华佗创制了麻醉剂“麻沸散”，开创了麻醉药用于外科手术的先河。 秦汉后期，随着交通日渐发达，少数民族地区的犀角、琥珀、羚羊角、麝香，以及南海的龙眼、荔枝核等渐为内地医家所采用，东南亚等地的药材也不断进入中国。 
+            西晋时期，皇甫谧的《针灸甲乙经》，系统论述了有关脏腑、经络等理论，初步形成了经络、针灸理论。 </p>
+    </div>
+    <div class="arry_2"><img src="../img/中医/箭头左下.jpg"></div>
+    <div class="content_1">
+        <h3 style="text-align: center;text-indent: 0;">鼎盛时期</h3>
+        <p>唐代，孙思邈提出的“大医精诚”，体现了中医对医道精微、心怀至诚、言行诚谨的追求，是中华民族高尚的道德情操和卓越的文明智慧在中医药中的集中体现，是中医药文化的核心价值理念。 孙思邈集毕生之精力，著成《备急千金要方》《千金翼方》。其中《千金要方》分为30卷，合方论5300首；《千金翼方》亦30卷，载方2571首，两册典籍对临床各科、针灸、食疗、预防、养生等均有论述，可谓集唐以前方书之大成。 
+            宋代是中医药发展的鼎盛时期。政府对中医教育比较重视，专设“太医局”作为培养中医人材的最高机构。教学方法也有很大改进，如针灸医官王惟一曾设计铸造铜人两具，精细刻制了十二经脉和354个穴位作为针灸教学和考试医师之用，作为最早的教学模型具有直观具体、形象逼真的展示效果，是中国医学教育发展史上的一大创举。宋朝政府专设“校正医书局”，有计划地对历代重要医籍进行了搜集、整理、考证和校勘，历时十余年。《素问》《伤寒论》《金匮要略》《针灸甲乙经》《诸病源候论》《千金要方》《千金翼方》和《外台秘要》等中医典籍都是当时校订和刊行后流传下来的。 
+            </p>
+    </div>
+    <div class="arry"><img src="../img/中医/箭头右下.jpg"></div>
+    <div class="content_3">
+        <h3 style="text-align: center;text-indent: 0;">创新融合
+        </h3>
+        <p>明代，李时珍的《本草纲目》，在世界上首次对药用植物进行了科学分类，创新发展了中药学的理论和实践，是一部药物学和博物学巨著。 
+            清代，叶天士的《温热论》，提出了温病和时疫的防治原则及方法，形成了中医药防治瘟疫（传染病）的理论和实践体系。 清代医家王清任根据尸体解剖和临床经验写成《医林改错》，改正了古代医书在人体解剖方面的的一些错误，强调了解剖知识对医生的重要性，并发展了瘀血致病理论与治疗方法。 清代中期以来，特别是民国时期，随着西方医学的传入，一些学者开始探索中西医药学汇通、融合。 
+            复兴
+            </p>
+        <p>现代，中医在中国仍然是治疗疾病的常用手段之一。
+            在国际上，针灸引起医学界极大兴趣。针灸已被证实在减轻手术后疼痛、怀孕期反胃、化疗所产生的反胃和呕吐、牙痛方面是有效的且其副作用极低，然而，对慢性疼痛，背部疼痛以及头痛，数据显示出模棱两可或者争议性。WHO认为很多针灸和一些草药的有效性得到了科学双盲研究的较强支持，但是对于其它的传统疗法还需要进行进一步研究，而且不能忽视未经研究的传统疗法存在的安全性及危险性等问题。WHO在2002年5月26日发表“2002—2005年传统医药研究全球策略”，邀请全球180余国将替代医学纳入该国的医疗政策。
+            </p>
+        <p>20世纪90年代发起的现代中医基础理论的原始创新、革命。中医新哲学观中医三个哲学观：整体观、辨证观，及新挖掘出的中医第三哲学观：相似观－分形论。
+
+            2018年10月1日，世界卫生组织首次将中医纳入其具有全球影响力的医学纲要。新纳入的中医传统医学的相关信息将写入第11版全球医学纲要第26章内，该章节主要阐释传统医学的分类体系，将于2022年在世卫组织成员国实施。 </p>
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="bottom" style="color: white;">2024@卢泳希版权所有</div>
+
+</body>
+</html>
